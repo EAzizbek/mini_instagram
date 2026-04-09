@@ -1,0 +1,11 @@
+<h2>{{ post.title }}</h2>
+<p>{{ post.body }}</p>
+
+{% if post.image %}
+    <img src="{{ post.image.url }}" width="200">
+{% endif %}
+
+<p>By {{ post.author }}</p>
+
+<a href="{% url 'post_update' post.pk %}">Edit</a>
+<a href="{% url 'post_delete' post.pk %}">Delete</a>

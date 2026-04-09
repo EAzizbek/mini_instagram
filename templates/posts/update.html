@@ -1,0 +1,9 @@
+<h2>Update Post</h2>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="title" value="{{ post.title }}"><br>
+    <textarea name="body">{{ post.body }}</textarea><br>
+    <input type="file" name="image"><br>
+    <button type="submit">Update</button>
+</form>
